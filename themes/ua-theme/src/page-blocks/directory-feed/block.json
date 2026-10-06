@@ -1,0 +1,110 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "ua-blocks/directory-feed",
+  "version": "0.1.5",
+  "title": "Directory Feed",
+  "category": "ua_page_blocks",
+  "icon": "cover-image",
+  "description": "Card can be used to surface content and link to other pages that may be relevant to the user, providing a preview of what the user can expect to find on that page.",
+  "editorStyle": "file:editor.css",
+  "attributes": {
+    "headingLevel": {
+      "type": "integer",
+      "default": 3
+    },
+    "textAlignment": {
+      "type": "string",
+      "default": ""
+    },
+    "imageToggle": {
+      "type": "boolean",
+      "default": true
+    },
+    "categoriesToggle": {
+      "type": "boolean",
+      "default": true
+    },
+    "tagsToggle": {
+      "type": "boolean",
+      "default": true
+    },
+    "excerptToggle" : {
+      "type": "boolean",
+      "default": true
+    },
+    "emailToggle": {
+      "type": "boolean",
+      "default": true
+    },
+    "phoneToggle": {
+      "type": "boolean",
+      "default": true
+    },
+    "locationToggle": {
+      "type": "boolean",
+      "default": true
+    },
+    "websiteToggle": {
+      "type": "boolean",
+      "default": true
+    },
+    "linkToggle": {
+      "type": "boolean",
+      "default": true
+    },
+    "layout": {
+      "type": "string",
+      "default": "list"
+    },
+    "maxColumns":{
+      "type": "number",
+      "default": 4
+    },
+    "orderBy": {
+      "type": "string",
+      "default": "last_name"
+    },
+    "orderIndexOverride": {
+      "type": "boolean",
+      "default": true
+    },
+    "category":{
+      "type": "string",
+      "default": ""
+    },
+    "tag":{
+      "type": "string",
+      "default": ""
+    },
+    "postPerPage":{
+      "type": "number",
+      "default": 100
+    },
+    "offset":{
+      "type": "number",
+      "default": 0
+    },
+    "maxPages":{
+      "type": "number",
+      "default": 0
+    },
+    "taxRelation":{
+      "type": "string",
+      "default": "AND_ANY"
+    }
+  },
+  "supports": {
+    "html": false,
+    "anchor": false,
+    "className": true,
+    "align": ["wide","full"]
+  },
+  "example": {
+    "attributes": {
+      "url": "#",
+      "text": "An example"
+    }
+  },
+  "textdomain": "ua-blocks"
+}

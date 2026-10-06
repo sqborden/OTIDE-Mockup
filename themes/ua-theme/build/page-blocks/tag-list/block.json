@@ -1,0 +1,41 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "ua-blocks/tag-list",
+  "version": "0.1.4",
+  "title": "Tag List",
+  "category": "ua_page_blocks",
+  "icon": "tag",
+  "description": "A block to display a list of tags.",
+  "attributes": {
+    "isRibbon": {
+      "type": "boolean",
+      "default": false
+    },
+    "tagListType": {
+      "type": "string",
+      "default": "post_tag"
+    },
+    "textAlignment": {
+      "type": "string",
+      "default": "left"
+    }
+  },
+  "supports": {
+    "html": false,
+    "anchor": true,
+    "className": false,
+    "align": [
+      "wide",
+      "full"
+    ]
+  },
+  "editorStyle": "file:./editor.css",
+  "example": {
+    "attributes": {
+      "url": "#",
+      "text": "An example"
+    }
+  },
+  "textdomain": "ua-blocks"
+}

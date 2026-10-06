@@ -1,0 +1,422 @@
+@use '../../modules/minerva/src/core' as *;
+
+/* =================================================================
+/* SECTION Video Covers
+================================================================= */
+
+.ua_minerva .ua_video-cover_play-pause-btn {
+  box-sizing: border-box;
+  z-index: 100;
+  position: absolute;
+  bottom: var(--ua_space--gutter);
+  right: var(--ua_space--gutter);
+  font-size: var(--ua_font-size--xsmall);
+  line-height: var(--ua_line-height--xsmall);
+  height: 2rem;
+  width: 2rem;
+  max-width: initial;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  border-radius: 9999px;
+  color: var(--ua_color-text--default, #35363b);
+  border: 2px solid var(--ua_color-text--default, #35363b);
+  background: var(--ua_color-background--surface, #fff);
+}
+
+.ua_minerva .ua_video-cover_play-pause-btn:hover,
+.ua_minerva .ua_video-cover_play-pause-btn:focus {
+  background: var(--ua_color-background--surface, #fff);
+  color: var(--ua_color-text--default, #35363b);
+}
+
+/* !SECTION Video Covers */
+/* =================================================================
+/* SECTION Youtube Shorts
+================================================================= */
+
+.wp-block-embed.is-style-youtube-short .wp-block-embed__wrapper {
+  box-sizing: border-box;
+  max-height: 65vh;
+  width: auto;
+  aspect-ratio: 9/16;
+  position: relative;
+  border-radius: var(--ua_border-radius--large, 1rem);
+  overflow: hidden;
+  margin: auto;
+}
+
+.wp-block-embed.is-style-youtube-short .wp-block-embed__wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+}
+
+/* !SECTION Youtube Shorts */
+
+#{$scope} .wp-block-search__button-outside button {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+#{$scope} .wp-block-search__button-outside input {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+#{$scope} .wp-block-search__button-inside button {
+  background: transparent;
+  color: inherit;
+  border: 0;
+}
+
+#{$scope} .wp-block-search__button-inside input {
+  border: 0;
+}
+
+#{$scope} .wp-block-search__button-inside .wp-block-search__inside-wrapper {
+  border: 1px solid var(--ua_color-background--chip);
+  border-radius: var(--ua_border-radius--small);
+}
+
+#{$scope} .wp-block-tag-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--ua_space--flow-half);
+}
+
+#{$scope} .wp-block-tag-cloud .tag-cloud-link {
+  display: block;
+  text-decoration: none;
+  color: var(--ua_color-text--default);
+  background: var(--ua_color-background--chip);
+  padding: var(--ua_space--05) var(--ua_space--2);
+  margin-right: 0;
+}
+
+#{$scope} .wp-block-tag-cloud .tag-cloud-link:hover {
+  text-decoration: underline;
+}
+
+.wp-block-social-links {
+  gap: #{space('flow-half')};
+}
+
+.wp-block-social-link:hover,
+.wp-block-social-link:focus {
+  transform: none;
+}
+
+.ua_minerva .wp-block-social-links .wp-social-link {
+  color: #{color('background', 'surface')};
+}
+
+.ua_minerva .wp-block-social-links .wp-social-link a {
+  font-size: #{font-size('normal')};
+  line-height: #{line-height('normal')};
+  background-color: transparent;
+  color: #{color('background', 'surface')};
+  padding: #{space('1')};
+  background: #{color('text', 'link')};
+  border: 0;
+  border-radius: #{border-radius('full')};
+}
+
+.ua_minerva .wp-block-social-links.has-visible-labels a {
+  padding: #{space('05')} #{space('1')};
+}
+
+.ua_minerva .wp-block-social-links .wp-social-link a:hover,
+.ua_minerva .wp-block-social-links .wp-social-link a:focus {
+  border-color: #{color('text', 'link-hover')};
+  background: #{color('text', 'link-hover')};
+}
+
+.wp-block-social-links.has-small-icon-size .wp-social-link a {
+  font-size: #{font-size('small')};
+  line-height: #{line-height('small')};
+  padding: #{space('05')};
+}
+
+.ua_minerva .wp-block-social-links.has-visible-labels.has-small-icon-size a {
+  padding: 0 #{space('05')};
+}
+
+.wp-block-social-links.has-large-icon-size .wp-social-link a {
+  font-size: #{font-size('medium')};
+  line-height: #{line-height('medium')};
+  padding: #{space('1')};
+}
+
+.ua_minerva .wp-block-social-links.has-visible-labels.has-large-icon-size a {
+  padding: #{space('05')} #{space('1')};
+}
+
+.wp-block-social-links.has-huge-icon-size .wp-social-link a {
+  font-size: #{font-size('large')};
+  line-height: #{line-height('large')};
+  padding: #{space('2')};
+}
+
+.ua_minerva .wp-block-social-links.has-visible-labels.has-huge-icon-size a {
+  padding: #{space('1')} #{space('2')};
+}
+
+/* Pagination */
+.wp-block-query-pagination>.wp-block-query-pagination-next,
+.wp-block-query-pagination>.wp-block-query-pagination-previous {
+  color: var(--ua_color-text--default);
+  text-decoration: none;
+}
+
+.wp-block-query-pagination>.wp-block-query-pagination-next:hover,
+.wp-block-query-pagination>.wp-block-query-pagination-previous:hover {
+  color: var(--ua_color-text--link);
+  text-decoration: underline;
+}
+
+.ua_minerva .ua_page_header:has(h1) ~ .ua_page_content .ua_page_title {
+  display: none !important;
+}
+
+.ua_minerva .ua_page_header:has(h1) ~ .ua_page_content > .entry-content {
+  margin-block-start: 0;
+}
+
+/* =================================================================
+/* SECTION Floats
+================================================================= */
+
+/* Disable default WordPress float behavior */
+.ua_minerva figure.alignleft,
+.ua_minerva figure.alignright {
+  display: block;
+  float: none;
+}
+
+.ua_minerva figure.alignleft > figcaption,
+.ua_minerva figure.alignright > figcaption {
+  display: block;
+  text-align: center;
+}
+
+/* Break out of float behavior for any blocks that overlap */
+.ua_minerva .ua_callout {
+  clear: both;
+}
+
+/* Apply proper float behavior, only when layout conditions are met */
+@media (min-width: 45em) {
+
+  :not(.is-layout-constrained) > figure.alignleft,
+  :not(.is-layout-constrained) > figure.alignright {
+    width: auto;
+    display: table;
+  }
+
+  /* Fix for flow spacing since next child margin-top doesn't work */
+  .is-layout-flow:not(.is-layout-constrained) > figure.alignleft,
+  .is-layout-flow:not(.is-layout-constrained) > figure.alignright {
+    margin-block-end: #{space('flow')};
+  }
+
+  :not(.is-layout-constrained) > figure.alignleft {
+    float: left;
+    margin-inline-end: #{space('flow')};
+  }
+
+  :not(.is-layout-constrained) > figure.alignleft > figcaption {
+    text-align: left;
+  }
+
+  :not(.is-layout-constrained) > figure.alignright > figcaption {
+    text-align: right;
+  }
+
+  :not(.is-layout-constrained) > figure.alignright {
+    float: right;
+    margin-inline-start: #{space('flow')};
+  }
+}
+
+/* !SECTION Floats */
+/* =================================================================
+/* SECTION Pagination
+================================================================= */
+
+// apply minerva button styles to wordpress pagination elements
+.page-numbers.next,
+.page-numbers.prev {
+  display: block;
+  box-sizing: border-box;
+  width: min-content;
+  padding: var(--ua_space--inline-block-padding, 0.25em 0.75em);
+  color: var(--ua_color-text--link-inverse, white);
+  background-color: var(--ua_color-text--link, #9e1b32);
+  border: 1px solid var(--ua_color-text--link, #9e1b32);
+  font-weight: 700;
+  text-align: center;
+  white-space: nowrap;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: .2em;
+}
+
+.page-numbers {
+  font-family: inherit;
+  font-size: 100%;
+  line-height: inherit;
+  box-sizing: border-box;
+  padding: var(--ua_space--inline-block-padding, .25em .75em);
+  background-color: var(--ua_color-background--element);
+  margin: 0 var(--ua_space--0, 0.25rem);
+  color: var(--ua_color-text--default);
+  border: 1px solid var(--ua_color-background--chip);
+}
+
+.page-numbers.current {
+  background-color: var(--ua_color-background--chip);
+}
+
+.ua_minerva .next:hover,
+.ua_minerva .prev:hover,
+.ua_minerva .next:focus,
+.ua_minerva .prev:focus {
+  outline-offset: 3px;
+  text-decoration: underline;
+}
+
+/* !SECTION Pagination */
+/* =================================================================
+/* SECTION Experimental
+================================================================= */
+// It would be good to eventually update this to use .ua_contrast__more and .ua_contrast__most and we could eliminate so many selectors by using those.
+
+.ua_experimental-margins .ua_page:has(.ua_page_header):not(:has(.ua_page_sub-nav)) {
+
+  .ua_page_content:has(.entry-content > .wp-block-group.alignfull.is-style-prominent:first-child),
+  .ua_page_content:has(.entry-content > .wp-block-group.alignfull.is-style-elevated:first-child),
+  .ua_page_content:has(.entry-content > .wp-block-columns.alignfull.is-style-prominent:first-child),
+  .ua_page_content:has(.entry-content > .wp-block-columns.alignfull.is-style-elevated:first-child),
+  .ua_page_content:has(.entry-content > .wp-block-media-text.alignfull.is-style-prominent:first-child),
+  .ua_page_content:has(.entry-content > .wp-block-media-text.alignfull.is-style-elevated:first-child),
+  .ua_page_content:has(.entry-content > .wp-block-cover.alignfull:first-child),
+  .ua_page_content:has(.entry-content > .wp-block-image.alignfull:first-child) {
+    margin-top: 0;
+  }
+}
+
+.ua_experimental-margins .ua_page:not(:has(.ua_page_sub-nav)) {
+
+  .ua_page_content:has(.entry-content > .wp-block-group.alignfull.is-style-prominent:last-child),
+  .ua_page_content:has(.entry-content > .wp-block-group.alignfull.is-style-elevated:last-child),
+  .ua_page_content:has(.entry-content > .wp-block-columns.alignfull.is-style-prominent:last-child),
+  .ua_page_content:has(.entry-content > .wp-block-columns.alignfull.is-style-elevated:last-child),
+  .ua_page_content:has(.entry-content > .wp-block-media-text.alignfull.is-style-prominent:last-child),
+  .ua_page_content:has(.entry-content > .wp-block-media-text.alignfull.is-style-elevated:last-child),
+  .ua_page_content:has(.entry-content > .wp-block-cover.alignfull:last-child),
+  .ua_page_content:has(.entry-content > .wp-block-image.alignfull:last-child) {
+    margin-bottom: 0;
+  }
+}
+
+/* !SECTION Experimental */
+/* =================================================================
+/* SECTION Directory Single Page
+================================================================= */
+
+.single-directory header hr,
+.single-directory .ua_page_header,
+.single-directory .ua_page_content,
+.single-directory .ua_page>.ua_page_content {
+  margin-top: #{space('flow-double')};
+}
+
+.single-directory .ua_page_header .ua_card_title {
+  @include typeset('xlarge');
+}
+
+.single-directory .ua_page_header .ua_card_subtitle {
+  font-weight: normal;
+  @include typeset('medium');
+}
+
+.single-directory .ua_page_header .ua_contact-card .ua_tag-list a {
+  font-weight: #{weight('semibold')};
+  @include typeset('normal');
+}
+
+/* !SECTION Directory Single Page */
+/* =================================================================
+/* SECTION Archive Page
+================================================================= */
+
+.archive .ua_page_header .ua_archive-title_prefix {
+  display: block;
+  font-family: #{font('accent')};
+  font-size: #{font-size('medium')};
+  text-transform: uppercase;
+  line-height: #{line-height('medium')};
+  letter-spacing: initial;
+}
+
+/* !SECTION Archive Page */
+// Remove image padding on full width
+.wp-block-image.alignfull {
+  padding-inline: 0;
+}
+
+/* override the media query for media-text block to account for stacking on larger viewports */
+@media (max-width:58em) {
+  .wp-block-media-text.is-stacked-on-mobile {
+    grid-template-columns: 100% !important;
+  }
+
+  .wp-block-media-text.is-stacked-on-mobile .wp-block-media-text__content {
+    grid-column: 1;
+    grid-row: 2;
+    padding: 0;
+  }
+
+  .wp-block-media-text.is-stacked-on-mobile .wp-block-media-text__media {
+    grid-column: 1;
+    grid-row: 1;
+    width: fit-content;
+  }
+}
+
+/* =================================================================
+/* SECTION Gallery & Captions
+================================================================= */
+
+.ua_minerva .wp-block-gallery.has-nested-images figure.wp-block-image:has(figcaption)::before {
+  display: none;
+}
+
+.ua_minerva .wp-block-gallery.has-nested-images figure.wp-block-image:not(.has-custom-border) figcaption {
+  background: rgba(100, 100, 100, 0.2);
+  backdrop-filter: blur(5px) brightness(80%) grayscale(50%);
+  -webkit-backdrop-filter: blur(5px) brightness(80%) grayscale(50%);
+  color: #fff;
+  border-radius: 0 0 var(--ua_border-radius--large) var(--ua_border-radius--large);
+  padding: var(--ua_space--1);
+  text-shadow: none;
+  border-block-start: 1px solid rgba(200, 200, 200, 0.3);
+  overflow: visible;
+}
+
+// NOTE: This will force the figcaption to overlay the image when there is a custom border. If this is uncommented, `:not(.has-custom-border)` should be removed from the previous selector. Note that because of the way border radius is applied by WordPress, the figcaption will not have the same border radius as the image. It seems the intended behavior from WordPress is to remove the overlay when a custom border is applied, so this has been commented out but left for future reference.
+
+// .ua_minerva .wp-block-gallery.has-nested-images figure.wp-block-image.has-custom-border figcaption {
+//   position: absolute;
+//   bottom: 0;
+//   left: 0;
+//   right: 0;
+//   max-height: 100%;
+// }
+
+/* !SECTION Gallery & Captions */

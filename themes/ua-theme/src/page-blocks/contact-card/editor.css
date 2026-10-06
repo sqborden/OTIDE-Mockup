@@ -1,0 +1,323 @@
+/**
+ * The following styles get applied inside the editor only.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+
+ @import "../../assets/editor.css";
+ @import url(https://assetfiles.ua.edu/fonts/fa_v6/fontawesome.css);
+
+ .ua_minerva * {
+  scroll-margin-top: var(--ua_space--flow, 2rem);
+  scroll-margin-bottom: var(--ua_space--flow, 2rem);
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  hyphens: manual;
+}
+ /* =================================================================
+/* SECTION Card
+================================================================= */
+.ua_minerva .ua_card {
+  font-size: var(--ua_font-size--normal, 1.25rem);
+  line-height: var(--ua_line-height--small, 1.5rem);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  border: 3px solid transparent;
+}
+
+.ua_minerva .ua_presence--subtle > .ua_card, .ua_minerva .is-style-subtle > .ua_card {
+  border: none;
+}
+
+.ua_minerva .ua_card > * + * {
+  margin-top: var(--ua_space--flow-half, calc(var(--ua_space--flow, 2rem) / 2));
+}
+
+.ua_minerva .ua_card .ua_card_content-wrapper {
+  background-color: var(--ua_color-background--element, #f2f3f4);
+  padding: var(--ua_space--block-padding, 2rem);
+  flex-grow: 1;
+}
+
+.ua_minerva .ua_card .ua_card_image-wrapper {
+  order: -1;
+  margin-block: 0;
+}
+
+.ua_minerva .ua_card div:first-child > * + * {
+  margin-top: var(--ua_space--flow-half, calc(var(--ua_space--flow, 2rem) / 2));
+}
+
+.ua_minerva .ua_card img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.ua_minerva .ua_card .ua_card_title {
+  font-size: var(--ua_font-size--medium, 1.5rem);
+  line-height: var(--ua_line-height--medium, 2rem);
+  font-weight: var(--ua_weight--semibold, 600);
+}
+
+.ua_minerva .ua_card .ua_card_title a[href] {
+  font-weight: inherit;
+  color: var(--ua_color-text--default, #35363b);
+  text-decoration: none;
+}
+
+.ua_minerva .ua_card .ua_card_title a[href]::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+}
+
+.ua_minerva .ua_card:hover .ua_card_title a[href],
+.ua_minerva .ua_card:focus-within .ua_card_title a[href] {
+  color: var(--ua_color-text--link, #9e1b32);
+  text-decoration: underline;
+}
+
+.ua_minerva .ua_card:has(.ua_card_title a[href]):hover {
+  border: 3px solid var(--ua_color-text--link, #9e1b32);
+}
+
+.ua_minerva .ua_presence--subtle > .ua_card:has(.ua_card_title a[href]):hover, .ua_minerva .is-style-subtle > .ua_card:has(.ua_card_title a[href]):hover {
+  border: none;
+}
+
+.ua_minerva .ua_card_subtitle {
+  font-size: var(--ua_font-size--xsmall, 0.75rem);
+  line-height: var(--ua_line-height--xsmall, 1rem);
+  font-family: var(--ua_font--accent, proxima-nova-condensed, sans-serif);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-block-start: 0;
+  line-height: 1em;
+}
+
+.ua_minerva .ua_card--landscape .ua_card_content-wrapper {
+  flex-basis: 66%;
+}
+
+.ua_minerva .ua_card--landscape .ua_card_image-wrapper {
+  flex-basis: 33%;
+}
+
+.ua_minerva .ua_presence--subtle > .ua_card .ua_card_image-wrapper, .ua_minerva .is-style-subtle > .ua_card .ua_card_image-wrapper {
+  max-width: 100%;
+  margin: 0;
+  margin-block-end: var(--ua_space--flow, 2rem);
+}
+
+.ua_minerva .ua_presence--subtle > .ua_card .ua_card_content-wrapper, .ua_minerva .is-style-subtle > .ua_card .ua_card_content-wrapper {
+  background-color: transparent;
+  padding: 0;
+}
+
+@media (min-width: 58rem) {
+  .ua_minerva .ua_card--landscape {
+    flex-direction: row;
+  }
+  .ua_minerva .ua_presence--subtle > .ua_card--landscape .ua_card_image-wrapper, .ua_minerva .is-style-subtle > .ua_card--landscape .ua_card_image-wrapper {
+    margin-inline-end: var(--ua_space--flow, 2rem);
+    margin-block-end: 0;
+  }
+  .ua_minerva .ua_card--landscape > .ua_card_image-wrapper img {
+    height: 100%;
+  }
+}
+/* !SECTION Card */
+
+/* =================================================================
+/* SECTION Contact Card
+================================================================= */
+.ua_minerva .ua_contact-card .ua_card {
+  font-size: var(--ua_font-size--normal, 1.25rem);
+  line-height: var(--ua_line-height--normal, 2rem);
+}
+
+.ua_minerva .ua_contact-card .ua_card_title {
+  font-size: var(--ua_font-size--large, 1.75rem);
+  line-height: var(--ua_line-height--large, 2.25rem);
+  letter-spacing: -0.01em;
+  letter-spacing: normal;
+  font-weight: var(--ua_weight--bold, 700);
+}
+
+.ua_minerva .ua_contact-card .ua_card_subtitle {
+  font-size: var(--ua_font-size--normal, 1.25rem);
+  line-height: var(--ua_line-height--normal, 2rem);
+  font-weight: var(--ua_weight--semibold, 600);
+  text-transform: none;
+  letter-spacing: normal;
+  font-family: var(--ua_font--body, proxima-nova, sans-serif);
+}
+
+.ua_minerva .ua_contact-card .ua_card--landscape .ua_card_content-wrapper {
+  place-self: center;
+  width: 100%;
+}
+
+/* ==============================
+/* SECTION Contact Card Tags
+============================== */
+.ua_minerva .ua_contact-card .ua_tag-list {
+  gap: 0;
+}
+
+.ua_minerva .ua_contact-card .ua_tag-list a,
+.ua_minerva .ua_contact-card .ua_tag-list span {
+  font-size: var(--ua_font-size--small, 1rem);
+  line-height: var(--ua_line-height--small, 1.5rem);
+  display: inline;
+  background: none;
+  padding: 0;
+}
+
+.ua_minerva .ua_contact-card .ua_tag-list li:not(:last-child)::after {
+  content: "·";
+  padding-inline: var(--ua_space--05, 0.25rem);
+}
+
+/* !SECTION Contact Card Tags */
+/* ==============================
+/* SECTION Contact Card Info
+============================== */
+.ua_minerva .ua_contact-card .ua_contact-card_info li {
+  color: var(--ua_color-text--link, #9e1b32);
+  font-size: var(--ua_font-size--small, 1rem);
+  line-height: var(--ua_line-height--small, 1.5rem);
+}
+
+.ua_minerva .ua_contact-card .ua_contact-card_info a,
+.ua_minerva .ua_contact-card .ua_contact-card_info span {
+  text-decoration: none;
+  font-weight: var(--ua_weight--regular, 400);
+  hyphens: auto;
+  word-break: break-word;
+  color: var(--ua_color-text--link, #9e1b32);
+}
+
+.ua_minerva .ua_contact-card .ua_contact-card_info a:hover,
+.ua_minerva .ua_contact-card .ua_contact-card_info a:focus {
+  text-decoration: underline;
+}
+
+.ua_minerva .ua_contact-card .ua_contact-card_info .fa {
+  font-size: var(--ua_font-size--small, 1rem);
+  line-height: var(--ua_line-height--small, 1.5rem);
+  display: inline-block;
+  width: 1em;
+  text-align: center;
+}
+
+/* !SECTION Contact Card Info */
+/* ==============================
+/* SECTION Contact Card CTA
+============================== */
+.ua_minerva .ua_contact-card .ua_cta, .ua_minerva .ua_contact-card .wp-block-button__link,
+.ua_minerva .ua_contact-card .wp-element-button {
+  min-width: 100%;
+  text-align: center;
+}
+
+@media (min-width: 58rem) {
+  .ua_minerva .ua_contact-card .ua_card--landscape .ua_cta, .ua_minerva .ua_contact-card .ua_card--landscape .wp-block-button__link,
+  .ua_minerva .ua_contact-card .ua_card--landscape .wp-element-button {
+    min-width: min-content;
+    text-align: center;
+  }
+}
+/* !SECTION Contact Card CTA */
+/* ==============================
+/* SECTION Image Correction
+============================== */
+.ua_minerva .ua_contact-card .ua_card--landscape > .ua_card_image-wrapper img {
+  height: auto;
+}
+
+/* !SECTION Image Correction */
+/* !SECTION Contact Card */
+
+
+/* ================================================================
+/* SECTION Call to Action
+================================================================= */
+.ua_minerva .ua_cta, .ua_minerva .wp-block-button__link,
+.ua_minerva .wp-element-button {
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: var(--ua_weight--bold, 700);
+  box-sizing: border-box;
+  display: inline-block;
+  width: fit-content;
+  max-width: fit-content;
+  text-decoration: none;
+  padding: var(--ua_space--inline-block-padding, 0.25em 0.75em);
+  color: var(--ua_color-background--surface, white);
+  background-color: var(--ua_color-text--link, #9e1b32);
+  border: 2px solid var(--ua_color-text--link, #9e1b32);
+  flex-grow: 0;
+  flex-basis: content;
+}
+
+.ua_minerva a.ua_cta:hover, .ua_minerva a.wp-block-button__link:hover,
+.ua_minerva a.wp-element-button:hover,
+.ua_minerva a.ua_cta:focus,
+.ua_minerva a.wp-block-button__link:focus,
+.ua_minerva a.wp-element-button:focus {
+  text-decoration: underline;
+  background: var(--ua_color-text--link-hover, #821E2E);
+  color: var(--ua_color-background--surface, white);
+  border-color: var(--ua_color-text--link-hover, #821E2E);
+}
+
+
+.ua_minerva .ua_cta_wrapper.ua_width--full .ua_cta, .ua_minerva .ua_cta_wrapper.alignfull .ua_cta, .ua_minerva .ua_cta_wrapper.ua_width--full .wp-block-button__link, .ua_minerva .ua_cta_wrapper.alignfull .wp-block-button__link,
+.ua_minerva .ua_cta_wrapper.ua_width--full .wp-element-button,
+.ua_minerva .ua_cta_wrapper.alignfull .wp-element-button {
+  flex-grow: 1;
+}
+
+/* !SECTION Call to Action */
+
+.ua_minerva .ua_tag-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--ua_space--flow-half, calc(var(--ua_space--flow, 2rem) / 2));
+}
+
+.ua_minerva .ua_tag-list a,
+.ua_minerva .ua_tag-list span {
+  display: block;
+  background: var(--ua_color-background--chip, #dfe2e5);
+  padding: var(--ua_space--05, 0.25rem) var(--ua_space--2, 1rem);
+}
+
+.ua_minerva .ua_tag-list a,
+.ua_minerva .ua_tag-list span {
+  text-decoration: none;
+  font-weight: normal;
+  color: var(--ua_color-text--default, #35363b);
+}
+
+.ua_minerva .ua_tag-list a:hover {
+  text-decoration: underline;
+  color: var(--ua_color-text--default, #35363b);
+}
+
+
+.ua_minerva .ua_presence--subtle > .ua_cta, .ua_minerva .is-style-subtle > .ua_cta, .ua_minerva .ua_presence--subtle > .wp-block-button__link, .ua_minerva .is-style-subtle > .wp-block-button__link,
+.ua_minerva .ua_presence--subtle > .wp-element-button,
+.ua_minerva .is-style-subtle > .wp-element-button {
+background: transparent;
+color: var(--ua_color-text--link, #9e1b32);
+}
+
+.ua_minerva ol, .ua_minerva ul {
+  list-style: none;
+}

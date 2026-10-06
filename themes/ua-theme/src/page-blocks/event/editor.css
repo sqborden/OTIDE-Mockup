@@ -1,0 +1,17 @@
+.wp-block-ua-blocks-event .components-flex .components-flex-item {
+  flex: 1 1 33%;
+}
+
+.components-popover__content {
+  height: initial !important;
+  max-height: initial !important;
+}
+
+.components-popover__content__ua-block {
+  padding: 1rem;
+  width: fit-content;
+}
+
+.components-popover__content__ua-block .components-number-control {
+  margin-bottom: unset;
+}

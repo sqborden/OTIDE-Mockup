@@ -1,0 +1,39 @@
+.editor-styles-wrapper .wp-block-ua-theme-data {
+  background: #F2F3F4;
+  border: 1px solid #DFE2E5;
+  margin: 1em;
+  min-height: 12em;
+  padding: 2em 0;
+}
+
+.editor-styles-wrapper .wp-block-ua-theme-data > h2 {
+  text-align: center;
+}
+
+.data_flex {
+  display: flex;
+  justify-content: center;
+  margin: 2em 0;
+}
+
+.data_flex > div {
+  margin: 0 2em;
+}
+
+.sidebar-content {
+  margin-top: 4em;
+}
+
+.hero-content {
+  margin-bottom: 4em;
+}
+
+.page-title-settings {
+  margin-bottom: 4em;
+}
+
+.page-title-settings > div {
+  display: flex; 
+  gap: 4em;
+  margin-bottom: 4em;
+}

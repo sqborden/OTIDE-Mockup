@@ -1,0 +1,21 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "ua-theme/site-footer",
+  "version": "0.1.0",
+  "title": "Site Footer",
+  "category": "ua_site_blocks",
+  "icon": "admin-appearance",
+  "description": "This is the site footer component required for every UA webpage.",
+  "attributes": {
+  },
+  "supports": {
+    "html": false,
+    "anchor": false,
+    "className": false
+  },
+  "example": {},
+  "textdomain": "ua-theme",
+  "editorStyle": "file:./editor.css",
+  "style": "file:./style.css"
+}

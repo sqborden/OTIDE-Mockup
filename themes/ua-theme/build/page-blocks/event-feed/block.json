@@ -1,0 +1,160 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "ua-blocks/event-feed",
+  "version": "0.1.0",
+  "title": "Event Feed",
+  "category": "ua_page_blocks",
+  "icon": "calendar-alt",
+  "description": "The event feed pulls a list of events from the Localist API.",
+  "editorStyle": "file:editor.css",
+  "attributes": {
+    "audience": {
+      "type": "string",
+      "default": ""
+    },
+    "audiences": {
+      "type": "array",
+      "default": [
+        {
+          "label": "Select an audience",
+          "value": ""
+        }
+      ]
+    },
+    "calendarURL": {
+      "type": "string"
+    },
+    "dateRange": {
+      "type": "string",
+      "default": 1
+    },
+    "departmentNames": {
+      "type": "array",
+      "default": []
+    },
+    "departmentOrGroup": {
+      "type": "string",
+      "default": "department"
+    },
+    "departments": {
+      "type": "array",
+      "default": []
+    },
+    "departmentURLs": {
+      "type": "object"
+    },
+    "departmentValues": {
+      "type": "array",
+      "default": [
+        {
+          "label": "Select a department",
+          "value": ""
+        }
+      ]
+    },
+    "eventNum": {
+      "type": "number",
+      "default": 4
+    },
+    "events": {
+      "type": "array",
+      "default": []
+    },
+    "eventsHeading": {
+      "type": "string",
+      "default": "Upcoming Events"
+    },
+    "eventType": {
+      "type": "string",
+      "default": ""
+    },
+    "eventTypes": {
+      "type": "array",
+      "default": [
+        {
+          "label": "Select a type",
+          "value": ""
+        }
+      ]
+    },
+    "groupQuery": {
+      "type": "string"
+    },
+    "id": {
+      "type": "string"
+    },
+    "match": {
+      "type": "string",
+      "default": "&require_all=true"
+    },
+    "matchAll": {
+      "type": "boolean",
+      "default": true
+    },
+    "maxColumns": {
+      "type": "number",
+      "default": 0
+    },
+    "multipleDepartments": {
+      "type": "array"
+    },
+    "multipleStudentGroups": {
+      "type": "array"
+    },
+    "singleDepartment": {
+      "type": "string",
+      "default": ""
+    },
+    "singleGroup": {
+      "type": "string",
+      "default": ""
+    },
+    "studentGroupNames": {
+      "type": "array",
+      "default": []
+    },
+    "studentGroups": {
+      "type": "array",
+      "default": []
+    },
+    "studentGroupURLs": {
+      "type": "object"
+    },
+    "studentGroupValues": {
+      "type": "array",
+      "default": [
+        {
+          "label": "Select a group",
+          "value": ""
+        }
+      ]
+    },
+    "textAlignment": {
+      "type": "string",
+      "default": ""
+    },
+    "topic": {
+      "type": "string",
+      "default": ""
+    },
+    "topics": {
+      "type": "array",
+      "default": [
+        {
+          "label": "Select a topic",
+          "value": ""
+        }
+      ]
+    }
+  },
+  "supports": {
+    "html": false,
+    "className": true,
+    "align": [
+      "wide",
+      "full"
+    ]
+  },
+  "textdomain": "ua-blocks"
+}

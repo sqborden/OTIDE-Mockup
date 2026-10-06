@@ -1,0 +1,56 @@
+@use '../../modules/minerva/src/core' as *;
+@use '../../modules/minerva/src/tokens' as *;
+
+/* ==============================
+/* SECTION Extend Color Contexts
+============================== */
+
+// This should only extend the correct selectors to ua components,
+// The token file should handle the actual variable changes
+
+.wp-block-group.is-style-elevated,
+.wp-block-columns.is-style-elevated,
+.wp-block-media-text.is-style-elevated {
+  @extend .ua_contrast--more;
+}
+
+.wp-block-group.is-style-prominent,
+.wp-block-columns.is-style-prominent,
+.wp-block-media-text.is-style-prominent,
+.wp-block-cover:not(.is-light):has(> .wp-block-cover__background:not(.has-white-background-color)),
+.wp-block-cover:has(> .has-black-background-color) {
+  @extend .ua_contrast--most;
+}
+
+// Remove default wordpress color override
+.wp-block-cover,
+.wp-block-cover__inner-container {
+  color: #{color('text', 'default')};
+}
+
+// Helper to apply section spacing
+* + %section-spacing,
+%section-spacing + * {
+  margin-block-start: #{space('section')};
+}
+
+// Add spacing and background color for elements with colored background
+.wp-block-group.is-style-prominent,
+.wp-block-group.is-style-elevated,
+.wp-block-columns.is-style-elevated,
+.wp-block-columns.is-style-prominent,
+.wp-block-media-text.is-style-elevated,
+.wp-block-media-text.is-style-prominent {
+  padding-block: #{space('section')};
+  background: #{color('background', 'surface')};
+  @extend %section-spacing;
+}
+
+// Add spacing and background color to cover blocks
+.wp-block-cover {
+  @extend %section-spacing;
+  padding-block: #{space('section')};
+  background-color: #{color('background', 'surface')};
+}
+
+/* !SECTION Extend Color Contexts */

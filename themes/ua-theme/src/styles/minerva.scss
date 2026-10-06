@@ -1,0 +1,284 @@
+// stylelint-disable
+@use '../../modules/minerva/src/core' as *;
+@use '../../modules/minerva/src/core/globals' as globals;
+
+/* =================================================================
+/* SECTION Brand UI
+================================================================= */
+
+@use '../../modules/minerva/src/navigation/BrandBar/' as brandBar;
+@use '../../modules/minerva/src/navigation/BrandFooter/' as brandFooter;
+
+/* !SECTION Brand UI */
+/* =================================================================
+/* SECTION Layout
+================================================================= */
+
+@use '../../modules/minerva/src/core/layout' as layout;
+@use '../../modules/minerva/src/layout/Grid/' as grid;
+@use '../../modules/minerva/src/layout/Page/' as page;
+
+/* !SECTION Layout */
+/* =================================================================
+/* SECTION Components
+================================================================= */
+
+@use '../../modules/minerva/src/components/AlertBanner/' as alertBanner;
+@use '../../modules/minerva/src/components/Callout/' as callout;
+@use '../../modules/minerva/src/components/CallToAction/' as callToAction;
+@use '../../modules/minerva/src/components/Card/' as card;
+@use '../../modules/minerva/src/components/DataHighlight/' as dataHighlight;
+@use '../../modules/minerva/src/components/Details/' as details;
+@use '../../modules/minerva/src/components/Event/' as event;
+@use '../../modules/minerva/src/components/EventFeed/' as eventFeed;
+@use '../../modules/minerva/src/components/LeadText/' as leadText;
+@use '../../modules/minerva/src/components/LinkBox/' as linkBox;
+@use '../../modules/minerva/src/components/LinkList/' as linkList;
+@use '../../modules/minerva/src/components/ContactCard/' as contactCard;
+@use '../../modules/minerva/src/components/PageSearch/' as pageSearch;
+@use '../../modules/minerva/src/components/Pullquote/' as pullquote;
+@use '../../modules/minerva/src/components/SocialLinks/' as socialLinks;
+@use '../../modules/minerva/src/components/Steps/' as steps;
+@use '../../modules/minerva/src/components/TagList/' as tagList;
+
+/* !SECTION Components */
+/* =================================================================
+/* SECTION Forms
+================================================================= */
+
+@use '../../modules/minerva/src/core/forms' as forms;
+
+/* !SECTION Forms */
+/* =================================================================
+/* SECTION Navigation
+================================================================= */
+
+@use '../../modules/minerva/src/navigation/Breadcrumbs/' as breadcrumbs;
+@use '../../modules/minerva/src/navigation/Pagination/' as pagination;
+@use '../../modules/minerva/src/navigation/PrimaryNavigation/' as primaryNavigation;
+@use '../../modules/minerva/src/navigation/SecondaryNavigation/' as secondaryNavigation;
+@use '../../modules/minerva/src/navigation/SiteFooter/' as siteFooter;
+@use '../../modules/minerva/src/navigation/TitleBar/' as titleBar;
+
+/* !SECTION Navigation */
+
+@use '../../modules/minerva/src/core/utilities' as utilities;
+
+/* =================================================================
+/* SECTION Minerva Patches
+================================================================= */
+
+/* SECTION Visually Hidden Fix */
+
+.screen-reader-text {
+  border: 0 !important;
+  clip-path: inset(50%) !important;
+  height: 1px !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: absolute !important;
+  width: 1px !important;
+  word-wrap: normal !important;
+}
+
+/* ==============================
+/* SECTION Extend Typography Utilities
+============================== */
+
+.has-xsmall-font-size {
+  @extend .ua-util_text--xsmall;
+}
+
+.has-small-font-size {
+  @extend .ua-util_text--small;
+}
+
+.has-ui-font-size {
+  @extend .ua-util_text--ui;
+}
+
+.has-normal-font-size {
+  @extend .ua-util_text--normal;
+}
+
+.has-medium-font-size {
+  @extend .ua-util_text--medium;
+}
+
+.has-large-font-size {
+  @extend .ua-util_text--large;
+}
+
+.has-xlarge-font-size {
+  @extend .ua-util_text--xlarge;
+}
+
+.has-xxlarge-font-size {
+  @extend .ua-util_text--xxlarge;
+}
+
+/* !SECTION Extend Typography Utilities */
+/* ==============================
+/* SECTION Extend Layout Styles
+============================== */
+
+.is-layout-flow,
+.is-layout-constrained {
+  @extend .ua_layout--flow;
+}
+
+.is-layout-constrained {
+  @extend .ua_layout--standard;
+}
+
+.alignwide {
+  @extend .ua_width--wide;
+}
+
+.alignfull {
+  @extend .ua_width--full;
+}
+
+// Don't use @extend, it increases specificity and will override user preference
+.is-layout-flex {
+  gap: #{space('flex-gap')};
+}
+
+/* Fix gap issue with Media & Text block */
+.wp-block-media-text {
+  gap: #{space('grid-gap')};
+
+  .wp-block-media-text__content {
+    padding: 0;
+  }
+}
+
+/* Gallery Layout fix*/
+.ua_minerva .wp-block-gallery-is-layout-flex {
+  display: flex;
+}
+
+/* !SECTION Extend Layout Styles */
+/* ==============================
+/* SECTION Extend Component Styles
+============================== */
+
+// Extend block variants from minerva
+.is-style-subtle {
+  @extend .ua_presence--subtle !optional;
+}
+
+.is-style-elevated {
+  @extend .ua_presence--elevated !optional;
+}
+
+.is-style-prominent {
+  @extend .ua_presence--prominent !optional;
+}
+
+hr.is-style-elephant {
+  @extend .ua_divider-elephant;
+}
+
+.wp-block-button__link,
+.wp-element-button {
+  @extend .ua_cta;
+}
+
+#{$scope} .wp-block-button__link {
+  max-width: none;
+}
+
+.wp-block-pullquote {
+  @extend .ua_pullquote;
+}
+
+.wp-block-details {
+  @extend .ua_details;
+}
+
+.wp-block-details .details-content {
+  @extend .ua_details_content;
+}
+
+.wp-block-table td,
+.wp-block-table th {
+  border: none;
+}
+
+ol.wp-block-list {
+  @extend %ol;
+}
+
+ul.wp-block-list {
+  @extend %ul;
+}
+
+ul.wp-block-latest-posts__list a,
+a.wp-block-post-excerpt__more-link,
+a.more-link {
+  @extend %a;
+}
+
+span[id^="more-"] {
+  padding: 0 !important;
+}
+
+/* !SECTION Extend Component Styles */
+/* !SECTION Minerva Patches */
+/* =================================================================
+/* SECTION Legacy Styles
+================================================================= */
+
+// I think this was an old patch to remove the background automatically set by the color context classes. That method proved more problematic than it was worth, and we now apply the background on a per-component basis
+// .ua_minerva .wp-block-cover .has-black-background-color~.wp-block-cover__inner-container {
+//   background: transparent;
+// }
+
+// I think this was an old fix to force color to use variable instead of the color override wordpress forces, could still be relevant
+// :where(.wp-block-cover-image:not(.has-text-color)),
+// :where(.wp-block-cover:not(.has-text-color)) {
+//   color: inherit;
+// }
+
+// I think it was probably from back when we had the full site editor. We had to apply the minerva class to a group in order for it to be applied to the front end without borking the editor
+// .wp-block-group.ua_minerva>*+* {
+//   margin-top: 0;
+// }
+
+// I think this was a fix to force things like cards to be full height when placed into a columns block. Probably still relevant
+// .wp-block-column>.ua_component_wrapper:only-child {
+//   height: 100%;
+// }
+
+/* !SECTION Legacy Styles */
+/* =================================================================
+/* SECTION TEMP Rounded Corner Support
+================================================================= */
+
+// TODO Extend not working properly
+#{$scope} .is-style-subtle > .ua_card,
+#{$scope} .is-style-subtle > .ua_card:has(.ua_card_title a[href]):hover {
+  border: none;
+}
+
+.wp-block-video:not(.alignfull) > video,
+.wp-block-embed.is-type-video:not(.alignfull) > .wp-block-embed__wrapper {
+  border-radius: #{border-radius('medium')};
+  overflow: hidden;
+}
+
+.wp-block-cover:not(.alignfull),
+.wp-block-media-text:not(.alignfull) .wp-block-media-text__media img,
+.wp-block-media-text.is-style-elevated:not(.alignfull),
+.wp-block-media-text.is-style-prominent:not(.alignfull),
+.wp-block-group.is-style-elevated:not(.alignfull),
+.wp-block-group.is-style-prominent:not(.alignfull),
+.wp-block-image:not(.alignfull) > img,
+.wp-block-post-featured-image:not(.alignfull) > img {
+  border-radius: #{border-radius('large')};
+  overflow: hidden;
+}
+
+/* !SECTION TEMP Rounded Corner Support */

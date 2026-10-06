@@ -1,0 +1,27 @@
+/**
+ * The following styles get applied inside the editor only.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+.wp-block-ua-blocks-steps .block-list-appender {
+  position: unset;
+  text-align: center;
+  border: 1px solid #757c88;
+  height: fit-content;
+}
+
+.wp-block-ua-blocks-steps .block-list-appender button {
+  width: 100%;
+  height: 100%;
+}
+
+.wp-block-ua-blocks-steps.is-style-subtle > div:not(.block-list-appender) {
+  border: 0;
+  padding: 0;
+}
+
+.wp-block-ua-blocks-steps.is-style-elevated > div:not(.block-list-appender) {
+  border: 0;
+  background-color: var(--ua_color-background--element, #f2f3f4);
+}

@@ -1,0 +1,11 @@
+/**
+ * The following styles get applied inside the editor only.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+@import "../../assets/editor.css";
+
+
+[data-type="ua-blocks/data-highlight"] {padding: .5rem;}
+[data-type="ua-blocks/data-highlight"] .components-base-control { width: unset; }

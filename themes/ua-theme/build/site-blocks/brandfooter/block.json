@@ -1,0 +1,27 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "ua-theme/brandfooter",
+  "version": "0.1.0",
+  "title": "Brand Footer",
+  "category": "ua_site_blocks",
+  "icon": "arrow-down",
+  "description": "A block that contains UA's brand footer. Uneditable.",
+  "attributes": {
+    "lock": {
+      "type": "object",
+      "default": {
+        "move": true,
+        "remove": true
+      }
+    }
+  },
+  "editorStyle": "file:./index.css",
+  "supports": {
+    "html": false,
+    "anchor": false,
+    "className": false,
+    "lock": true
+  },
+  "textdomain": "ua-theme"
+}

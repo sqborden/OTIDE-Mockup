@@ -1,0 +1,107 @@
+@use '../../modules/minerva/src/core' as *;
+/* =================================================================
+/* SECTION Gravity Forms
+================================================================= */
+
+.ua_minerva .gfield {
+  margin-top: var(--ua_space--flow);
+}
+
+.ua_minerva .gfield_required {
+  margin-left: 0.1em;
+}
+
+.ua_minerva .gchoice {
+  display: flex;
+  gap: 0.5em;
+  margin-top: var(--ua_space--flow-half);
+  align-content: center;
+}
+
+.ua_minerva fieldset input {
+  border-color: var(--ua_color-accent--neutral);
+}
+
+/* !SECTION Gravity Forms */
+/* =================================================================
+/* SECTION TablePress
+================================================================= */
+
+.ua_minerva .tablepress {
+  --head-active-bg-color: #{color('text', 'alt')};
+  --head-active-text-color: #{color('background', 'surface')};
+  --head-text-color: #{color('background', 'surface')};
+  --head-bg-color: #{color('text', 'default')};
+  --text-color: inherit;
+  --odd-text-color: inherit;
+  --odd-bg-color: transparent;
+  --even-text-color: inherit;
+  --even-bg-color: transparent;
+  --hover-text-color: inherit;
+  --hover-bg-color: #{color('background', 'element')};
+  --border-color: #{color('background', 'chip')};
+  --padding: #{space('2')};
+}
+
+.ua_minerva .dataTables_wrapper {
+  overflow-x: auto;
+}
+
+.ua_minerva .tablepress> :where(tfoot)>*>th,
+.ua_minerva .tablepress> :where(tfoot)>*>td {
+  background-color: transparent;
+  color: inherit;
+  font-weight: normal;
+}
+
+.ua_minerva .dataTables_paginate.paging_simple .paginate_button:focus-visible,
+.ua_minerva .tablepress .sorting:focus-visible {
+  outline: auto;
+}
+
+.ua_minerva .tablepress .sorting:focus-visible {
+  outline-offset: -2px;
+}
+
+.ua_minerva .dataTables_info {
+  color: #{color('text', 'subtle')};
+}
+
+.ua_minerva .dataTables_paginate.paging_simple {
+  padding: 0 1em;
+}
+
+.ua_minerva .dataTables_paginate.paging_simple .paginate_button {
+  color: inherit;
+}
+
+.ua_minerva .dataTables_paginate.paging_simple .paginate_button:focus,
+.ua_minerva .dataTables_paginate.paging_simple .paginate_button:hover {
+  background: none;
+  color: #{color('text', 'link')};
+  text-decoration: underline;
+}
+
+.ua_minerva .dataTables_paginate.paging_simple .paginate_button.disabled,
+.ua_minerva .dataTables_paginate.paging_simple .paginate_button.disabled:focus,
+.ua_minerva .dataTables_paginate.paging_simple .paginate_button.disabled:hover {
+  color: #{color('background', 'chip')};
+  text-decoration: none;
+}
+
+.ua_minerva .dataTables_wrapper .dataTables_paginate.paging_simple .paginate_button::after,
+.ua_minerva .dataTables_wrapper .dataTables_paginate.paging_simple .paginate_button::before {
+  font-family: #{font('icon')};
+  color: inherit;
+  text-shadow: none;
+}
+
+.ua_minerva .dataTables_paginate.paging_simple .paginate_button.next::after {
+  content: "\f061";
+}
+
+.ua_minerva .dataTables_paginate.paging_simple .paginate_button.previous::before {
+  content: "\f060";
+}
+
+/* !SECTION TablePress */

@@ -1,0 +1,28 @@
+/**
+ * The following styles get applied inside the editor only.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+.ua_layout--grid {
+  --grid-column-count: 6;
+  --grid-gap--width: 2rem;
+  --grid-gap--count: calc(var(--grid-column-count) - 1);
+  --grid-gap--total: calc(var(--grid-gap--count) * var(--grid-gap--width));
+  --grid-item--min-width: 250px;
+  --grid-item--max-width: calc((100% - var(--grid-gap--total)) / var(--grid-column-count));
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(max(var(--grid-item--min-width), var(--grid-item--max-width)), 1fr));
+}
+
+.wp-block-ua-blocks-minerva-grid .block-list-appender {
+  position: unset;
+  text-align: center;
+  border: 1px solid #757c88;
+  height: fit-content;
+}
+
+.wp-block-ua-blocks-minerva-grid .block-list-appender button {
+  width: 100%;
+  height: 100%;
+}

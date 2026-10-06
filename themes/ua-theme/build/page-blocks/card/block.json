@@ -1,0 +1,71 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "ua-blocks/card",
+  "version": "0.1.4",
+  "title": "Card",
+  "category": "ua_page_blocks",
+  "icon": "cover-image",
+  "description": "Card can be used to surface content and link to other pages that may be relevant to the user, providing a preview of what the user can expect to find on that page.",
+  "editorStyle": "file:editor.css",
+  "attributes": {
+    "headingLevel": {
+      "type": "integer",
+      "default": 2
+    },
+    "title": {
+      "type": "string",
+      "default": ""
+    },
+    "subTitle": {
+      "type": "string",
+      "default": ""
+    },
+    "url": {
+      "type": "string",
+      "default": ""
+    },
+    "opensInNewTab": {
+      "type": "boolean",
+      "default": false
+    },
+    "mediaId": {
+      "type": "number"
+    },
+    "showImage": {
+      "type": "boolean",
+      "default": false
+    },
+    "img": {
+      "type": "object",
+      "default": {
+        "src": "",
+        "alt": ""
+      }
+    },
+    "aspectRatio": {
+      "type": "string",
+      "default": ""
+    },
+    "textAlignment": {
+      "type": "string",
+      "default": ""
+    },
+    "isLandscape": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "supports": {
+    "html": false,
+    "anchor": false,
+    "className": true
+  },
+  "example": {
+    "attributes": {
+      "url": "#",
+      "text": "An example"
+    }
+  },
+  "textdomain": "ua-blocks"
+}

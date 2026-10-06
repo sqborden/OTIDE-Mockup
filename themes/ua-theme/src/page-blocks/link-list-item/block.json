@@ -1,0 +1,46 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "ua-blocks/link-list-item",
+  "version": "0.1.4",
+  "title": "Link List Item",
+  "category": "ua_page_blocks",
+  "icon": "menu",
+  "description": "Link List can be used to display the list of title with icon and link it to other pages that may be relevant to the user, providing a preview of what the user can expect to find on that page.",
+  "parent": ["ua-blocks/link-list"],
+  "attributes": {
+    "title": {
+      "type": "string",
+      "default": ""
+    },
+    "url": {
+      "type": "string",
+      "default": ""
+    },
+    "opensInNewTab": {
+      "type": "boolean",
+      "default": false
+    },
+    "icon": {
+      "type": "string",
+      "default": ""
+    },
+    "iconAltText": {
+      "type": "string",
+      "default": ""
+    }
+  },
+  "supports": {
+    "html": false,
+    "anchor": true,
+    "className": false
+  },
+  "editorStyle": "file:./editor.css",
+  "example": {
+    "attributes": {
+      "url": "#",
+      "text": "An example"
+    }
+  },
+  "textdomain": "ua-blocks"
+}

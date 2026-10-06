@@ -1,0 +1,34 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "ua-blocks/callout",
+  "version": "0.1.0",
+  "title": "Callout",
+  "category": "ua_page_blocks",
+  "icon": "info",
+  "description": "Callout box is to show the information with category",
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "headingLevel": {
+      "type": "integer",
+      "default": 2
+    },
+    "context": {
+      "type": "string"
+    }
+  },
+  "supports": {
+    "html": false,
+    "anchor": false,
+    "className": true
+  },
+  "example": {
+    "attributes": {
+      "url": "#",
+      "text": "An example"
+    }
+  },
+  "textdomain": "ua-blocks"
+}

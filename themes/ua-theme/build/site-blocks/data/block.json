@@ -1,0 +1,28 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "ua-theme/data",
+  "parent": [
+    "core/post-content"
+  ],
+  "version": "0.1.0",
+  "title": "Page Settings",
+  "category": "ua_site_blocks",
+  "icon": "upload",
+  "description": "A block for saving block data in a post meta field.",
+  "attributes": {
+    "align": {
+      "type": "string",
+      "default": "full"
+    },
+    "menuOptions": {
+      "type": "array"
+    }
+  },
+  "editorStyle": "file:./index.css",
+  "supports": {
+    "align": true,
+    "multiple": false
+  },
+  "textdomain": "ua-theme"
+}

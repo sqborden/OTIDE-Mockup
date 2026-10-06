@@ -1,0 +1,39 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "ua-blocks/minerva-grid-item",
+  "version": "0.1.4",
+  "title": "Minerva Grid Item",
+  "category": "ua_page_blocks",
+  "icon": "menu",
+  "description": "Minerva Grid Item",
+  "parent": [
+    "ua-blocks/minerva-grid"
+  ],
+  "attributes": {
+    "gridType": {
+      "type": "string",
+      "default": ""
+    },
+    "verticalAlignment": {
+      "type": "string",
+      "default": ""
+    }
+  },
+  "usesContext": [
+    "gridType"
+  ],
+  "supports": {
+    "html": false,
+    "anchor": false,
+    "className": false
+  },
+  "editorStyle": "file:./editor.css",
+  "example": {
+    "attributes": {
+      "url": "#",
+      "text": "An example"
+    }
+  },
+  "textdomain": "ua-blocks"
+}

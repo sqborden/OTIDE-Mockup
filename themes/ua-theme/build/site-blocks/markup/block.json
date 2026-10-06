@@ -1,0 +1,19 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "ua-theme/markup",
+  "version": "0.1.0",
+  "title": "Markup",
+  "category": "ua_site_blocks",
+  "icon": "download",
+  "description": "A block for rendering block data outside of the post content. Does not appear in block inserter, as it has no editor context.",
+  "attributes": {
+    "type": {
+      "type": "string"
+    }
+  },
+  "supports": {
+    "inserter": false
+  },
+  "textdomain": "ua-theme"
+}

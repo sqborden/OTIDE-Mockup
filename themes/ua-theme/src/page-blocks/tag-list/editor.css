@@ -1,0 +1,167 @@
+/**
+ * The following styles get applied inside the editor only.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+/* =================================================================
+/* SECTION TagList
+================================================================= */
+
+.ua_minerva .ua_tag-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--ua_space--1, .5rem);
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.ua_minerva .ua_tag-list::-webkit-scrollbar {
+  display: none;
+}
+
+.ua_minerva .ua_tag-list a,
+.ua_minerva .ua_tag-list span {
+  display: block;
+  font-size: var(--ua_font-size--small, 1rem);
+  line-height: var(--ua_line-height--xsmall, 1rem);
+  border: 1px solid var(--ua_color-accent--neutral, #757c88);
+  padding: var(--ua_space--05, .25rem) var(--ua_space--2, 1rem);
+  border-radius: var(--ua_border-radius--full, 9999px);
+
+  text-decoration: none;
+  font-weight: normal;
+  color: var(--ua_color-text--default, #35363b);
+  background: var(--ua_color-background--surface, #ffffff);
+}
+
+.ua_minerva .ua_tag-list a:hover,
+.ua_minerva .ua_tag-list a:focus {
+  background: var(--ua_color-background--element, #f2f3f4);
+  color: var(--ua_color-text--default, #35363b);
+}
+
+/* !SECTION Tag */
+/* ==============================
+/* SECTION Ribbon
+============================== */
+
+.ua_minerva .ua_tag-list_ribbon {
+  display: flex;
+  gap: var(--ua_space--flow-half, calc(var(--ua_space--flow, 2rem) / 2));
+  align-items: center;
+  position: relative;
+}
+
+.ua_minerva .ua_tag-list_ribbon:has([data-expanded='true']) {
+  align-items: start;
+}
+
+.ua_minerva .ua_tag-list_ribbon[data-minerva-initialized='true'] .ua_tag-list:not([data-expanded='true']) {
+  overflow-x: scroll;
+  flex-wrap: nowrap;
+}
+
+.ua_minerva .ua_tag-list_ribbon[data-minerva-initialized='true'] .ua_tag-list:not([data-expanded='true']) a,
+.ua_minerva .ua_tag-list_ribbon[data-minerva-initialized='true'] .ua_tag-list:not([data-expanded='true']) span {
+  text-wrap: nowrap;
+}
+
+/* !SECTION Ribbon */
+/* ==============================
+/* SECTION TagList Ribbon Buttons
+============================== */
+
+.ua_minerva .ua_tag-list_ribbon button {
+  display: none;
+}
+
+.ua_minerva .ua_tag-list_ribbon button:hover,
+.ua_minerva .ua_tag-list_ribbon button:focus {
+  color: var(--ua_color-text--default, #35363b);
+}
+
+.ua_minerva .ua_tag-list_ribbon[data-minerva-initialized='true']:has([data-scroll-position]) button,
+.ua_minerva .ua_tag-list_ribbon[data-minerva-initialized='true']:has([data-expanded='true']) .ua_tag-list_expand {
+  display: block;
+  font-size: var(--ua_font-size--small, 1rem);
+  line-height: var(--ua_line-height--xsmall, 1rem);
+  padding: var(--ua_space--05, .25rem) 0;
+  border: none;
+  color: var(--ua_color-text--default, #35363b);
+  z-index: 5;
+}
+
+.ua_minerva .ua_tag-list_ribbon .ua_tag-list_expand {
+  background: transparent;
+}
+
+.ua_minerva .ua_tag-list_ribbon .fa-circle-chevron-up,
+.ua_minerva .ua_tag-list_ribbon:has([data-expanded='true']) .fa-circle-chevron-down {
+  display: none;
+}
+
+.ua_minerva .ua_tag-list_ribbon:has([data-expanded='true']) .fa-circle-chevron-up {
+  display: initial;
+}
+
+.ua_minerva .ua_tag-list_ribbon .ua_tag-list_scroll-back,
+.ua_minerva .ua_tag-list_ribbon .ua_tag-list_scroll-forward {
+  position: absolute;
+  width: 3em;
+  max-width: 3em;
+  height: 100%;
+}
+
+.ua_minerva .ua_tag-list_ribbon .ua_tag-list_scroll-back {
+  text-align: left;
+  background: linear-gradient(to left, rgba(255, 255, 255, 0) 0%, var(--ua_color-background--surface, #ffffff) 100%);
+}
+
+.ua_minerva .ua_tag-list_ribbon .ua_tag-list_scroll-forward {
+  right: 2em;
+  text-align: right;
+      background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, var(--ua_color-background--surface, #ffffff) 100%);
+}
+
+.ua_minerva:has([dir='RTL']) .ua_tag-list_ribbon .ua_tag-list_scroll-forward {
+  right: 0;
+}
+
+.ua_minerva:has([dir='RTL']) .ua_tag-list_ribbon .ua_tag-list_scroll-back {
+  left: 2em;
+}
+
+.ua_minerva .ua_tag-list_ribbon:has([data-scroll-position='start']) .ua_tag-list_scroll-back,
+.ua_minerva .ua_tag-list_ribbon:has([data-scroll-position='end']) .ua_tag-list_scroll-forward,
+.ua_minerva .ua_tag-list_ribbon:has([data-expanded='true']) .ua_tag-list_scroll-back,
+.ua_minerva .ua_tag-list_ribbon:has([data-expanded='true']) .ua_tag-list_scroll-forward {
+  /* stylelint-disable-next-line declaration-no-important -- Needed to ensure no unnecessary buttons */
+  display: none !important;
+}
+
+/* !SECTION TagList Ribbon Buttons */
+/* !SECTION TagList */
+
+/* =================================================================
+/* SECTION Justification & Alignment
+================================================================= */
+.ua_minerva .ua_justify--start,
+.ua_minerva .ua_justify--end,
+.ua_minerva .ua_justify--center {
+  display: flex;
+}
+
+.ua_minerva .ua_justify--center {
+  justify-content: center;
+}
+
+.ua_minerva .ua_justify--end {
+  justify-content: end;
+}
+
+.ua_minerva .ua_justify--start {
+  justify-content: start;
+}
+/* !SECTION Justification & Alignment */

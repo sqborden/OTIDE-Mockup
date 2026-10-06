@@ -1,0 +1,93 @@
+/**
+ * The following styles get applied inside the editor only.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+ .ua_minerva .ua_breadcrumbs .ua_breadcrumbs_list li,
+ .ua_minerva .ua_breadcrumbs .ua_breadcrumbs_list li ol {
+   margin: 0;
+   list-style: none;
+   width: 100%;
+   display: inline;
+ }
+
+ .ua_minerva .ua_breadcrumbs .ua_breadcrumbs_list li ol {
+  box-sizing: border-box;
+  display: none;
+  width: fit-content;
+  background: var(--ua_color-background--element, #f2f3f4);
+  padding: 0;
+  position: absolute;
+  padding-inline: var(--ua_space--2, 1rem);
+}
+
+.ua_minerva .ua_breadcrumbs_list ol li {
+  margin-block-end: 0;
+  display: block;
+}
+
+.ua_minerva .ua_breadcrumbs_list ol[aria-hidden=false] {
+  display: block;
+}
+
+.ua_minerva .ua_breadcrumbs_list a {
+  font-weight: normal;
+  text-decoration: none;
+  color: var(--ua_color-text--link, #9e1b32);
+}
+
+.ua_minerva .ua_breadcrumbs_list ol li a {
+  color: var(--ua_color-text--default, #35363b);
+}
+
+.ua_minerva .ua_breadcrumbs_list li a::after {
+  box-sizing: border-box;
+  display: inline-block;
+  content: "/";
+  text-align: center;
+  width: var(--ua_space--2, 1rem);
+  color: var(--ua_color-text--default, #35363b);
+}
+
+.ua_minerva .ua_breadcrumbs_list ol li a::after {
+  content: none;
+}
+
+.ua_minerva .ua_breadcrumbs_list a:hover,
+.ua_minerva .ua_breadcrumbs_list a:focus {
+  text-decoration: underline;
+}
+
+/* OverFlow Button */
+.ua_minerva .ua_breadcrumbs_list button {
+  font-size: var(--ua_font-size--normal, 1.25rem);
+  line-height: var(--ua_line-height--normal, 2rem);
+  font-weight: var(--ua_weight--regular, 400);
+  margin: 0;
+  padding-inline: var(--ua_space--1, 0.5rem);
+  display: inline-block;
+  background-color: transparent;
+  border: none;
+  color: var(--ua_color-text--default, #35363b);
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+}
+
+.ua_minerva .ua_breadcrumbs_list button:hover,
+.ua_minerva .ua_breadcrumbs_list button:active,
+.ua_minerva .ua_breadcrumbs_list button:focus {
+  background-color: transparent;
+  color: var(--ua_color-text--default, #35363b);
+  text-decoration: none;
+}
+
+.ua_minerva .ua_breadcrumbs_list button::after {
+  box-sizing: border-box;
+  display: inline-block;
+  content: "/";
+  text-align: center;
+  width: var(--ua_space--1, 0.5rem);
+  color: var(--ua_color-text--default, #35363b);
+}

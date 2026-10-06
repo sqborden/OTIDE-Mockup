@@ -1,0 +1,9 @@
+.ua_page-search {
+  width: 100%;
+}
+
+.ua_page-search .ua_page-search_input {
+  border: var(--ua_border--standard, 1px solid var(--ua_color-background--chip, #dfe2e5));
+  border-inline-start: 7px solid var(--ua_color-accent--primary, #9e1b32);
+  color: var(--ua_color-text--subtle);
+}

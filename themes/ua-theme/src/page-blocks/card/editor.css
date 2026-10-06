@@ -1,0 +1,15 @@
+/**
+ * The following styles get applied inside the editor only.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+@import "../../assets/editor.css";
+
+.ua-blocks__card-media-image {
+  padding: .5rem;
+  background: unset;color: #333;
+  border: 1px solid #949494;
+  border-radius: 2px;
+  box-shadow: 0 0 0 transparent;
+}

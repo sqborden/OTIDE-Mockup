@@ -1,0 +1,28 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "ua-blocks/lead-text",
+  "version": "0.1.4",
+  "title": "Lead Text",
+  "category": "ua_page_blocks",
+  "icon": "text",
+  "description": "Lead text is to display highlighted text",
+  "attributes": {
+    "text": {
+      "type": "string",
+      "default": ""
+    }
+  },
+  "supports": {
+    "html": false,
+    "anchor": false,
+    "className": true
+  },
+  "example": {
+    "attributes": {
+      "url": "#",
+      "text": "An example"
+    }
+  },
+  "textdomain": "ua-blocks"
+}

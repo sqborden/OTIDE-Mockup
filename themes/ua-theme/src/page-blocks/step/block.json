@@ -1,0 +1,35 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "ua-blocks/step",
+  "version": "0.1.4",
+  "title": "Step",
+  "category": "ua_page_blocks",
+  "icon": "dashicons-editor-ol",
+  "description": "Steps can be used to display the ordered list of title with description relevant to the process steps.",
+  "parent": ["ua-blocks/steps"],
+  "editorStyle": "file:editor.css",
+  "attributes": {
+    "title": {
+      "type": "string",
+      "default": ""
+    },
+    "headingLevel": {
+      "type": "integer",
+      "default": 2
+    }
+  },
+  "usesContext": ["headingLevel"],
+  "supports": {
+    "html": false,
+    "anchor": false,
+    "className": true
+  },
+  "example": {
+    "attributes": {
+      "url": "#",
+      "text": "An example"
+    }
+  },
+  "textdomain": "ua-blocks"
+}

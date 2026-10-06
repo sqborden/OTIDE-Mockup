@@ -1,0 +1,280 @@
+/*
+Theme Name: OTIDE Child Theme
+Template: ua-theme
+Description: A child theme of the third generation of the official WordPress theme of the University of Alabama.
+Author: Office of Teaching Innovation and Digital Education
+Author URI: https://tide.ua.edu/
+*/ 
+
+/* Custom Code */
+@import url("https://use.typekit.net/hpp5hbx.css");
+
+#UA_PrimaryNav {
+  border-top: 1px solid #eee;
+}
+
+.ua_minerva .ua_primary-navigation_list a:not(.ua_minerva .ua_primary-navigation_list li li a) {
+  font-size: 17px !important;
+}
+
+.home #menu-main li:nth-child(-n+6) {
+  display: none;
+}
+
+.page-id-159 #menu-main li:not(li:nth-child(-n+6)) {
+  display: none;
+}
+
+#UA_TitleBar
+{
+  border-bottom: 3px solid #eee;
+}
+
+.ua_minerva .ua_primary-navigation_list li.ua_menu-item-parent a {
+  line-height: 1.2;
+}
+
+.ua_minerva .program-table h3 {
+  font-size: var(--ua_font-size--medium, 1.75rem);
+  line-height: var(--ua_line-height--medium, 2.25rem);
+}
+
+.wp-block-group.is-style-elevated 
+{
+  box-shadow: inset 0 0 5px #ccc;
+}
+
+.hp-card .ua_card 
+{
+  height: inherit;
+}
+
+.ua_component_wrapper.why-uao .ua_card_content-wrapper {
+  background-color: transparent !important;
+  border: 3px double #5c5c5c;
+}
+
+.wp-block-image.testing-logos img {
+  margin-left: 0;
+}
+
+.ua_minerva .wp-block-heading sup,
+.ua_minerva .wp-block-post-title sup {
+  top: 0;
+  font-size: 30px;
+  padding: 0.5rem;
+}
+
+.ua_site-footer_content .ua_layout--grid
+{
+  --grid-item--min-width: 130px !important;
+}
+
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: none;
+}
+
+.animate-on-scroll.bounce-in {
+  opacity: 1;
+  animation: bounceIn 1s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+@keyframes bounceIn {
+  0% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  60% {
+    transform: translateY(-10px);
+    opacity: 1;
+  }
+  80% {
+    transform: translateY(5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+
+
+/* Accessibility fixes */
+
+/*  Adds the external link icon to link list blocks */
+li a.ua_link-list_item[target="_blank"]::after 
+{
+  font-family: var(--ua_font--icon, "Font Awesome 6 Pro");
+  content: "\f08e";
+  display: inline-block;
+  position: relative;
+  top: -0.05em;
+  padding: 0 0.2em 0 0.4em;
+  font-size: 70%;
+}
+
+/*  Removes red border above footer - a change implemented in UA Theme 3.1.5 */
+#ua_app.ua_minerva .ua_site-footer 
+{
+  border-top: none;
+}
+
+/* Media Queries */
+@media (min-width: 58rem) {
+  #UA_PrimaryNav.ua_minerva .ua_primary-navigation_list ul 
+  {
+    border-left:none;
+  }
+}
+@media (max-width: 550px) {
+  .home h1.wp-block-heading.has-text-align-center 
+  {
+    font-size: 2.75rem;
+  }
+}
+
+/***** New Homepage Styles (place in its own CSS file *******/
+.ua_page_content.is-layout-flow {
+  z-index: 9;
+}
+
+.ua_minerva .ua_page > .ua_page_content {
+  margin-bottom: 0 !important;
+}
+
+.wp-block-image.alignfull.under-hero {
+  margin-top: -200px;
+}
+
+.ua_minerva .wp-block-group.alignwide.heading-group {
+  border-radius: 5%;
+  box-shadow: var(--ua_shadow--small, 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1));
+  padding: var(--ua_space--flow-double, calc(var(--ua_space--flow, 2rem) * 2)) var(--ua_space--gutter, 1rem);
+  background: rgba(100, 100, 100, 0.6);
+  backdrop-filter: blur(5px) brightness(80%) grayscale(50%);
+  -webkit-backdrop-filter: blur(5px) brightness(80%) grayscale(50%);
+  border: 1px solid rgba(200, 200, 200, 0.3);
+}
+
+.ua_minerva .ua_link-list {
+  background: transparent !important;
+  border: none !important;
+}
+
+.ua_minerva .ua_link-list a:hover {
+  background-color: transparent !important;
+}
+
+.ua_minerva .ua_link-list li a {
+  padding: var(--ua_space--2, 1rem);
+  border-bottom: 1px solid #fff !important;
+  border-block-start: none;
+}
+
+.ua_minerva .ua_link-list li a::after {
+  content: '\f324';
+  float: right;
+  font-size: var(--ua_font-size--xsmall);
+  font-family: var(--ua_font--icon);
+}
+
+.ua_minerva .ua_link-list li a {
+  background: inherit;
+  background: linear-gradient(to left, transparent 50%, #f2f3f4 50%) right;
+  background-size: 200%;
+  transition: .4s ease-out;
+}
+
+.ua_minerva .ua_link-list li a:hover{
+  background-position: left;
+  color: #9e1b32;
+  font-weight: 700;
+}
+
+.grey .wp-block-cover__background.has-white-background-color.has-background-dim-100.has-background-dim {
+  background-color: #f2f3f4 !important;
+}
+
+.wp-block-cover.grey {
+  margin-top: -1rem !important;
+  padding-top: 2rem;
+}
+
+.ua_minerva .programs .ua_card .ua_card_content-wrapper {
+  background-color: #DFE2E5;
+  border-radius: 0;
+}
+
+.ua_component_wrapper.custom-covers.alignfull {
+  margin-top: 0;
+  padding: 0 !important;
+}
+
+.ua_minerva .custom-covers .ua_layout--grid {
+  --grid-item--min-width: 200px;
+}
+
+.custom-covers .show-hover {
+  display: none;
+}
+
+.custom-covers .wp-block-cover {
+  transition: all 0.5s ease-in-out;
+  min-height: 250px;
+}
+
+.custom-covers h2 {
+  text-transform: uppercase;
+}
+
+.custom-covers .wp-block-cover:hover .show-hover{
+  display: block;
+}
+
+.custom-covers .wp-block-cover:hover h2 {
+  display: none;
+}
+
+.custom-covers .wp-block-cover:hover .wp-block-cover__background.has-black-background-color.has-background-dim {
+  opacity: .8 !important;
+  background-color: #9e1b32 !important;
+}
+
+.wp-block-cover.data .wp-block-cover__background.has-black-background-color.has-background-dim-100.has-background-dim {
+  background-color: #9e1b32 !important;
+}
+
+.ua_minerva .data .ua_data-highlight_stat {
+  font-size: var(--ua_font-size--xxlarge, 2rem);
+  color: transparent;
+  -webkit-text-stroke: 2px;
+    -webkit-text-stroke-color: currentcolor;
+  -webkit-text-stroke-color: currentcolor;
+  -webkit-text-stroke-color: var(--ua_color-text--default, #35363b);
+}
+
+.data .wp-block-cover__background {
+  background: linear-gradient(#9e1b32, #35363be5 85%);
+  opacity: 1 !important;
+}
+
+.data .has-black-background-color {
+  background-color: transparent !important;
+}
+
+@media (min-width: 58rem) {
+  .ua_minerva .ua_primary-navigation_list {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .ua_minerva .ua_primary-navigation_list li.ua_menu-item-parent a:not(.ua_menu-item-parent ul a) {
+    text-align: center;
+  }
+}
+
+@media (max-width: 550px) {
+  .home h1.wp-block-heading.has-text-align-center {
+    font-size: 2.75rem;
+  }
+}

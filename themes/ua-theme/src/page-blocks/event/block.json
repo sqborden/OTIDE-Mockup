@@ -1,0 +1,57 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "ua-blocks/event",
+  "version": "0.1.4",
+  "title": "Event",
+  "category": "ua_page_blocks",
+  "icon": "tickets-alt",
+  "description": "The Event component can be used to display an event's details with link to more information about the event.",
+  "editorStyle": "file:editor.css",
+  "attributes": {
+    "displayTime": {
+      "type": "boolean",
+      "default": true
+    },
+    "allDay": {
+      "type": "boolean",
+      "default": false
+    },
+    "title": {
+      "type": "string",
+      "default": ""
+    },
+    "url": {
+      "type": "string",
+      "default": ""
+    },
+    "opensInNewTab": {
+      "type": "boolean",
+      "default": false
+    },
+    "start": {
+      "type": "string",
+      "default": ""
+    },
+    "end": {
+      "type": "string",
+      "default": ""
+    },
+    "location": {
+      "type": "string",
+      "default": ""
+    }
+  },
+  "supports": {
+    "html": false,
+    "anchor": false,
+    "className": true
+  },
+  "example": {
+    "attributes": {
+      "url": "#",
+      "text": "An example"
+    }
+  },
+  "textdomain": "ua-blocks"
+}

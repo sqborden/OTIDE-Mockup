@@ -1,0 +1,14 @@
+@use 'minerva' as minerva;
+@use 'theme' as theme;
+@use 'plugin-support' as plugin-support;
+
+
+// TODO: Remove with Minerva 2.0
+// stylelint-disable-next-line plugin/use-baseline -- supports query needed to confirm accessibility compliance
+@supports (-webkit-text-stroke: 0.03em #000) {
+  .ua_accent-text,
+  .ua-style_text-outline {
+    color: transparent;
+    -webkit-text-stroke: 0.03em var(--ua_color-text--default);
+  }
+}

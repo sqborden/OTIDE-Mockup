@@ -1,0 +1,28 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "ua-blocks/page-search",
+  "version": "0.1.0",
+  "title": "Page Search",
+  "category": "ua_site_blocks",
+  "icon": "search",
+  "description": "Page search is used to search the page content",
+  "attributes": {
+    "qualifier": {
+      "type": "string",
+      "default": ".ua_page_content"
+    },
+    "selector": {
+      "type": "string",
+      "default": "p, h2, h3, h4, h5, h6, li, td, th, blockquote, figcaption"
+    }
+  },
+  "editorStyle": "file:./editor.css",
+  "supports": {
+    "html": false,
+    "anchor": false,
+    "className": true,
+    "multiple": false
+  },
+  "textdomain": "ua-blocks"
+}

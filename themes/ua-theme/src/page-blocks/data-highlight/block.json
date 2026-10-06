@@ -1,0 +1,45 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "ua-blocks/data-highlight",
+  "version": "0.1.0",
+  "title": "Data Highlight",
+  "category": "ua_page_blocks",
+  "icon": "star-empty",
+  "description": "Data Highlights can be used to highlight various statistical points of interests. The combined lead, title, and description must read as a single sentence.",
+  "editorStyle": "file:editor.css",
+  "attributes": {
+    "title": {
+      "type": "string",
+      "default": ""
+    },
+    "description": {
+      "type": "string",
+      "default": ""
+    },
+    "lead": {
+      "type": "string",
+      "default": ""
+    },
+    "showLeadIn": {
+      "type": "boolean",
+      "default": false
+    },
+    "textAlignment": {
+      "type": "string",
+      "default": ""
+    }
+  },
+  "supports": {
+    "html": false,
+    "anchor": false,
+    "className": true
+  },
+  "example": {
+    "attributes": {
+      "url": "#",
+      "text": "An example"
+    }
+  },
+  "textdomain": "ua-blocks"
+}

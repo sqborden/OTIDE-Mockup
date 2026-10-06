@@ -1,0 +1,36 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "ua-theme/title-bar",
+  "version": "0.1.0",
+  "title": "Title Bar",
+  "category": "ua_site_blocks",
+  "icon": "welcome-learn-more",
+  "description": "A block for placing the title bar.",
+  "attributes": {
+    "lock": {
+      "type": "object",
+      "default": {
+        "move": true,
+        "remove": true
+      }
+    },
+    "siteTitle": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "string"
+    },
+    "subtitleURL": {
+      "type": "string"
+    }
+  },
+  "editorStyle": "file:./index.css",
+  "supports": {
+    "html": false,
+    "anchor": false,
+    "className": false,
+    "lock": true
+  },
+  "textdomain": "ua-theme"
+}

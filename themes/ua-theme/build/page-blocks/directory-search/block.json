@@ -1,0 +1,51 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "ua-blocks/directory-search",
+  "version": "0.1.4",
+  "title": "Directory Search",
+  "category": "ua_page_blocks",
+  "icon": "search",
+  "description": "A search bar that submits to the Directory Search results page.",
+  "editorStyle": "file:editor.css",
+  "attributes": {
+    "placeholder": {
+      "type": "string",
+      "default": "Search directory..."
+    },
+    "buttonText": {
+      "type": "string",
+      "default": "Search"
+    },
+    "width": {
+      "type": "number",
+      "default": 100
+    },
+    "iconButton": {
+      "type": "boolean",
+      "default": false
+    },
+    "widthUnit": {
+      "type": "string",
+      "default": "%"
+    },
+    "showLabel": {
+      "type": "boolean",
+      "default": true
+    },
+    "labelText": {
+      "type": "string",
+      "default": "Search"
+    }
+  },
+  "supports": {
+    "html": false,
+    "anchor": false,
+    "className": true,
+    "align": [
+      "wide",
+      "full"
+    ]
+  },
+  "textdomain": "ua-blocks"
+}

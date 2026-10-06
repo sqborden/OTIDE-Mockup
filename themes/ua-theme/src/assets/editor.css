@@ -1,0 +1,127 @@
+/**
+ * The following styles get applied inside the editor only.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+/* =================================================================
+Resets
+=================================================================*/
+
+/*
+ try to to reset theme styles that would prevent standardizing appearance of <RichText> & <TextControl>
+*/
+
+ .ua-block .components-text-control__input.block-editor-rich-text__editable,
+ .ua-block .components-text-control__input[type=text]
+ {
+    background: white;
+    color: #333;
+    border: 1px solid #949494;
+    border-radius: 2px;
+    box-shadow: 0 0 0 transparent;
+  }
+
+  .ua-block .components-base-control__field > p {
+    margin: unset !important;
+  }
+
+  /* This class will increase height of input and make scrollable*/
+  .ua-block .text-control_description {
+    height: 5rem;
+    overflow-y: scroll;
+  }
+
+/* =================================================================
+Editor blocks
+=================================================================*/
+
+.ua-block {padding: .5rem;}
+.ua-block .components-base-control { width: unset; }
+
+
+
+.ua-block .block-editor-inner-blocks {
+  background: white;
+  color: #333;
+  border: 1px solid #949494;
+  border-radius: 2px;
+  box-shadow: 0 0 0 transparent;
+  padding: .5rem;
+}
+
+
+.ua-block .block-editor-inner-blocks .block-editor-block-list__layout {
+  margin: 0 .5rem 0;
+}
+
+/* =================================================================
+  Editor sidebar
+================================================================= */
+
+/* Fix for this issue: https://github.com/WordPress/gutenberg/issues/41458 */
+.edit-post-sidebar .components-panel__row__block {
+  display: block;
+}
+
+/* Help shown under components-panel__row__block is too far below control */
+.edit-post-sidebar .components-panel__row__block .components-base-control__field {
+  margin-bottom: unset;
+}
+
+/* =================================================================
+/* Handle background color shift
+================================================================= */
+
+.wp-block.wp-block-group.is-style-elevated,
+.wp-block.wp-block-columns.is-style-elevated,
+.wp-block.wp-block-media-text.is-style-elevated {
+  background: #eee;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.editor-styles-wrapper .wp-block-group.has-ua-color-neutral-text-background-color,
+.wp-block.wp-block-group.is-style-prominent,
+.wp-block.wp-block-columns.is-style-prominent,
+.wp-block.wp-block-media-text.is-style-prominent {
+  background: #333;
+  color: white;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.has-ua-color-neutral-text-background-color .block-list-appender button,
+.wp-block.wp-block-group.is-style-prominent .block-list-appender button,
+.wp-block.wp-block-columns.is-style-prominent .block-list-appender button,
+.wp-block.wp-block-columns.is-style-prominent .block-list-appender button {
+  background: white;
+  color: black;
+}
+
+.components-panel .block-editor-link-control {
+  width: 100% !important;
+  min-width: unset !important;
+  position: relative !important;
+
+}
+
+.block-editor-link-control__field input[type="text"],
+.block-editor-link-control__field.block-editor-url-input input[type="text"].block-editor-url-input__input {
+  width: 100% !important;
+}
+
+.editor-styles-wrapper .wp-block-buttons .is-style-subtle .wp-element-button  {
+  background: transparent;
+  color: #9e1b32;
+  border: 2px solid #9e1b32;
+}
+
+/* =================================================================
+/* Cover fixes
+================================================================= */
+
+.editor-styles-wrapper .wp-block-cover,
+.editor-styles-wrapper .wp-block-cover-image {
+  min-height: 0;
+}
